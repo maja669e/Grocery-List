@@ -19,7 +19,7 @@ public class GroceryList {
     public String toString(){
         String result = "";
         for(GroceryItemOrder order : orders){
-            result += order;
+            result += order + "\n";
         }
         return result;
     }
