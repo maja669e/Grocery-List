@@ -11,4 +11,11 @@ public class GroceryList {
         orders.add(item);
     }
 
+    public String toString(){
+        String result = "";
+        for(GroceryOrderItem order : orders){
+            result += order;
+        }
+        return result;
+    }
 }
