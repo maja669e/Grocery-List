@@ -1,19 +1,21 @@
 package demo;
-import GroceryOrderItem;
+
 
 public class GroceryList {
-    private GroceryOrderItem[] orders = new GroceryOrderItem[10];
+    private GroceryItemOrder[] orders = new GroceryItemOrder[10];
+    private int index = 0;
 
-    public void add(GroceryOrderItem item){
-        if(orders.length() >= 10){
+    public void add(GroceryItemOrder item){
+        if(index >= 10){
             return;
         }
-        orders.add(item);
+        orders[index] = item;
+        index++;
     }
 
     public String toString(){
         String result = "";
-        for(GroceryOrderItem order : orders){
+        for(GroceryItemOrder order : orders){
             result += order;
         }
         return result;
