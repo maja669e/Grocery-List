@@ -2,23 +2,29 @@ package demo;
 
 
 public class GroceryList {
+    GroceryItemOrder groceryItemOrder;
     private GroceryItemOrder[] orders = new GroceryItemOrder[10];
     private int index = 0;
 
-    public void add(GroceryItemOrder item){
-        if(index >= 10){
+    public void add(GroceryItemOrder item) {
+        if (index >= 10) {
             return;
         }
         orders[index] = item;
         index++;
     }
-   /* public void getTotalCost(){
 
-    }*/
+    public void getTotalCost() {
+        int sum = 0;
+        for (int i = 0; i < orders.length; i++) {
+            sum = sum + orders[i].getCost();
+        }
+        System.out.printf("The full price is %d$", sum);
+    }
 
-    public String toString(){
+    public String toString() {
         String result = "";
-        for(GroceryItemOrder order : orders){
+        for (GroceryItemOrder order : orders) {
             result += order + "\n";
         }
         return result;

@@ -11,8 +11,8 @@ public class Main {
         GroceryItemOrder kartofler = new GroceryItemOrder("Danske kartofler", 1, 7);
         GroceryItemOrder peber = new GroceryItemOrder("Sort peber", 1, 5);
         GroceryItemOrder vodka = new GroceryItemOrder("Slavevodka", 1, 60);
-        GroceryItemOrder nudler= new GroceryItemOrder("Karry nudler fra Netto", 5, 2);
-        GroceryItemOrder chokolade = new GroceryItemOrder("Marabou", 2, 40);
+        GroceryItemOrder nudler= new GroceryItemOrder("Karrynudler fra Netto", 5, 2);
+        GroceryItemOrder chokolade = new GroceryItemOrder("Marabou", 2, 20);
         GroceryItemOrder chips = new GroceryItemOrder("Dild", 1, 18);
         //GroceryItemOrder chips2 = new GroceryItemOrder("Dild2", 1, 18);
         groceryList.add(mælk);
@@ -27,5 +27,6 @@ public class Main {
         groceryList.add(chips);
         //groceryList.add(chips2);
         System.out.println(groceryList);
+        groceryList.getTotalCost();
     }
 }
