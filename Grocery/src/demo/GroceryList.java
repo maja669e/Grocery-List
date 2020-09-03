@@ -12,6 +12,9 @@ public class GroceryList {
         orders[index] = item;
         index++;
     }
+   /* public void getTotalCost(){
+
+    }*/
 
     public String toString(){
         String result = "";
