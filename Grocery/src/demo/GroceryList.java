@@ -1,6 +1,5 @@
 package demo;
 
-
 public class GroceryList {
     private GroceryItemOrder[] orders = new GroceryItemOrder[10];
     private int index = 0;
