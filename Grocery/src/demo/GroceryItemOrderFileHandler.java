@@ -16,11 +16,13 @@ public class GroceryItemOrderFileHandler {
             int quantity;
             int price;
             while(scan.hasNext()){
-                name = scan.next();
+                name = scan.next().replace("-", " ");
                 quantity = scan.nextInt();
                 price = scan.nextInt();
+
                 itemOrders.add(new ItemOrder(name, quantity, price));
 //                scan.nextLine();
+
             }
             return itemOrders;
         } catch (FileNotFoundException e) {
