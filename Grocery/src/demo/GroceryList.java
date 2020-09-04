@@ -24,7 +24,7 @@ public class GroceryList {
 
     public String toString() {
         String result = "";
-        for(int i = 0; i < index; i++){
+        for (int i = 0; i < index; i++) {
             result += orders.get(i) + "\n";
         }
         result += "Total cost: " + getTotalCost() + "$";
