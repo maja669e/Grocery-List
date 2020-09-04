@@ -3,10 +3,10 @@ package demo;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private ArrayList<GroceryItemOrder> orders = new ArrayList<>();
+    private ArrayList<ItemOrder> orders = new ArrayList<>();
     private int index = 0;
 
-    public void add(GroceryItemOrder item) {
+    public void add(ItemOrder item) {
         if (index >= 10) {
             return;
         }

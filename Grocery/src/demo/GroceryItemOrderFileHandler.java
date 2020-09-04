@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class GroceryItemOrderFileHandler {
     File file = new File("groceries.txt");
 
-    public ArrayList<GroceryItemOrder> scanGroceryItemOrdersFromFile(){
-        ArrayList<GroceryItemOrder> itemOrders = new ArrayList<>();
+    public ArrayList<ItemOrder> scanGroceryItemOrdersFromFile(){
+        ArrayList<ItemOrder> itemOrders = new ArrayList<>();
         try {
             Scanner scan = new Scanner(file);
             String name;
@@ -19,7 +19,10 @@ public class GroceryItemOrderFileHandler {
                 name = scan.next().replace("-", " ");
                 quantity = scan.nextInt();
                 price = scan.nextInt();
-                itemOrders.add(new GroceryItemOrder(name, quantity, price));
+
+                itemOrders.add(new ItemOrder(name, quantity, price));
+//                scan.nextLine();
+
             }
             return itemOrders;
         } catch (FileNotFoundException e) {
