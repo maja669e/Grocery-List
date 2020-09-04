@@ -17,7 +17,7 @@ public class GroceryList {
     public double getTotalCost() {
         int sum = 0;
         for (int i = 0; i < orders.size(); i++) {
-            sum = sum + orders.get(i).getCost();
+            sum += orders.get(i).getCost();
         }
         return sum;
     }

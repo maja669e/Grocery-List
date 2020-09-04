@@ -1,1 +1,10 @@
 Milk 2 10
+Nudler 10 2
+Chokolade 1 10
+Sukker 1 15
+Gouda 3 10
+Danske-kartofler 1 7
+Sort-peber 1 5
+Slave-vodka 1 48
+Marabou 2 20
+Dild 1 10
