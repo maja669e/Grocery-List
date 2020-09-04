@@ -12,22 +12,20 @@ public class GroceryList {
         index++;
     }
 
-    public void getTotalCost() {
+    public double getTotalCost() {
         int sum = 0;
         for (int i = 0; i < orders.length; i++) {
             sum = sum + orders[i].getCost();
         }
-        System.out.printf("The full price is %d$", sum);
+        return sum;
     }
 
     public String toString() {
         String result = "";
-        double grandTotal = 0;
         for(int i = 0; i < index; i++){
             result += orders[i] + "\n";
-            grandTotal += orders[i].getCost();
         }
-        result += "Grand total: " + grandTotal + "$";
+        result += "Total cost: " + getTotalCost() + "$";
         return result;
     }
 }

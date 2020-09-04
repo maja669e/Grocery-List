@@ -27,6 +27,5 @@ public class Main {
         groceryList.add(chips);
         //groceryList.add(chips2);
         System.out.println(groceryList);
-        groceryList.getTotalCost();
     }
 }
