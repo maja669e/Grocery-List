@@ -1,22 +1,12 @@
 package demo;
 
-public class GroceryItemOrder {
-    private String name;
+public class ItemOrder {
+    GroceryProduct groceryProduct;
     private int quantity;
-    private int price;
 
-    public GroceryItemOrder (String name, int quantity, int price){
-        this.name = name;
+    public ItemOrder(String name, int quantity, int price){
+        this.groceryProduct = new GroceryProduct(price, name);
         this.quantity = quantity;
-        this.price = price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getQuantity() {
@@ -27,19 +17,13 @@ public class GroceryItemOrder {
         this.quantity = quantity;
     }
 
-    public int getPrice() {
-        return price;
-    }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
     public int getCost() {
-        return price*quantity;
+        return groceryProduct.getPrice()*quantity;
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + ", quantity: " + quantity + ", total price: " + getCost() + "$";
+        return "Name: " + groceryProduct.getName() + ", quantity: " + quantity + ", total price: " + getCost() + "$";
     }
 }

@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         GroceryItemOrderFileHandler fileHandler = new GroceryItemOrderFileHandler();
-        ArrayList<GroceryItemOrder> itemOrders = fileHandler.scanGroceryItemOrdersFromFile();
+        ArrayList<ItemOrder> itemOrders = fileHandler.scanGroceryItemOrdersFromFile();
         GroceryList groceryList = new GroceryList();
-        for(GroceryItemOrder order : itemOrders){
+        for(ItemOrder order : itemOrders){
             groceryList.add(order);
         }
 //        GroceryItemOrder mælk = new GroceryItemOrder("Arla", 2, 5);
