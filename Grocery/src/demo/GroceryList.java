@@ -10,7 +10,7 @@ public class GroceryList {
         if (index >= 10) {
             return;
         }
-        orders.set(index, item);
+        orders.add(item);
         index++;
     }
 
