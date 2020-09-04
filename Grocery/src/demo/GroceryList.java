@@ -14,9 +14,12 @@ public class GroceryList {
 
     public String toString(){
         String result = "";
-        for(GroceryItemOrder order : orders){
-            result += order;
+        double grandTotal = 0;
+        for(int i = 0; i < index; i++){
+            result += orders[i] + "\n";
+            grandTotal += orders[i].getCost();
         }
+        result += "Grand total: " + grandTotal + "$";
         return result;
     }
 }
