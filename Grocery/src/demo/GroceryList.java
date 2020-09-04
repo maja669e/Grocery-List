@@ -1,21 +1,23 @@
 package demo;
 
+import java.util.ArrayList;
+
 public class GroceryList {
-    private GroceryItemOrder[] orders = new GroceryItemOrder[10];
+    private ArrayList<GroceryItemOrder> orders = new ArrayList<>();
     private int index = 0;
 
     public void add(GroceryItemOrder item) {
         if (index >= 10) {
             return;
         }
-        orders[index] = item;
+        orders.set(index, item);
         index++;
     }
 
     public double getTotalCost() {
         int sum = 0;
-        for (int i = 0; i < orders.length; i++) {
-            sum = sum + orders[i].getCost();
+        for (int i = 0; i < orders.size(); i++) {
+            sum = sum + orders.get(i).getCost();
         }
         return sum;
     }
@@ -23,7 +25,7 @@ public class GroceryList {
     public String toString() {
         String result = "";
         for(int i = 0; i < index; i++){
-            result += orders[i] + "\n";
+            result += orders.get(i) + "\n";
         }
         result += "Total cost: " + getTotalCost() + "$";
         return result;
